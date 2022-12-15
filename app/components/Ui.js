@@ -42,12 +42,8 @@ export class UI {
     <span class="badge badge-info">
     Blog: ${data.blog || "ops"}</span>
     </article>
-
-    </section>    
-     
-  
-    
-    `;
+    </section>
+    `.trim();
     this.clearMessage();
   }
 
@@ -74,6 +70,6 @@ export class UI {
       `;
     });
 
-    document.getElementById("repositories").innerHTML = template;
+    document.getElementById("repositories").innerHTML = template.trim();
   }
 }
