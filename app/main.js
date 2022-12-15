@@ -4,6 +4,7 @@ import { UI } from "./components/Ui";
 let client_id = import.meta.env.CLIENT_ID,
   client_secret = import.meta.env.CLIENT_SECRET;
 const github = new Github(client_id, client_secret);
+console.log(github);
 const ui = new UI();
 const userForm = document.getElementById("userForm");
 
