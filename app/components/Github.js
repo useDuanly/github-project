@@ -8,11 +8,11 @@ export class Github {
 
   async fetchUser(user) {
     const userData = await fetch(
-      `http://api.github.com/users/${user}?client_id=${this.client_id}&client_secret=${this.client_secret}`
+      `https://api.github.com/users/${user}?client_id=${this.client_id}&client_secret=${this.client_secret}`
     );
 
     const repo = await fetch(
-      `http://api.github.com/users/${user}/repos?client_id=${this.client_id}&client_secret=${this.client_secret}&per_page=${this.repos_count}&sort${this.repos_sort}`
+      `https://api.github.com/users/${user}/repos?client_id=${this.client_id}&client_secret=${this.client_secret}&per_page=${this.repos_count}&sort${this.repos_sort}`
     );
     const dataRepo = await repo.json();
 
