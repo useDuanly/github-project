@@ -1,7 +1,8 @@
 import { Github } from "./components/Github";
 import { UI } from "./components/Ui";
 
-import { client_id, client_secret } from "./config.json";
+let client_id = import.meta.CLIENT_ID,
+  client_secret = import.meta.CLIENT_SECRET;
 const github = new Github(client_id, client_secret);
 const ui = new UI();
 const userForm = document.getElementById("userForm");
