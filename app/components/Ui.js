@@ -22,7 +22,6 @@ export class UI {
   }
 
   showProfile(data) {
-    console.log(data);
     this.profile.innerHTML = `
   
     <section class="card mt-2 animated bounceInLeft">
@@ -54,7 +53,7 @@ export class UI {
 
   showRepo(repo) {
     let template = "";
-    console.log(repo);
+
     repo?.forEach((repos) => {
       template += `
        <div class="card card-body mt-2 animated bounceInUp">
